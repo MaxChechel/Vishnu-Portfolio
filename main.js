@@ -2,11 +2,17 @@ import Lenis from '@studio-freight/lenis';
 import imagesLoaded from 'imagesloaded';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Flip } from 'gsap/Flip';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
+const navLinks = document.querySelectorAll('.navbar_link');
+const navLinkShape = document.querySelector('.navbar_link-shape');
+const navMenu = document.querySelector('.navbar_menu');
 
-gsap.registerPlugin('ScrollTrigger');
+gsap.registerPlugin('ScrollTrigger', 'Flip');
+
+let mm = gsap.matchMedia();
 
 document.addEventListener('DOMContentLoaded', () => {
     //Window to top on page refresh
@@ -44,6 +50,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         contactLink.addEventListener('click', () => {
             lenis.scrollTo('#bottom');
+        });
+    });
+
+    mm.add('(hover:hover)', () => {
+        navLinks.forEach(function (link) {
+            link.addEventListener('mouseenter', function () {
+                const state = Flip.getState(navLinkShape, {
+                    props: 'opacity',
+                    simple: true,
+                });
+                navLinkShape.classList.add('is-active');
+
+                this.appendChild(navLinkShape);
+
+                Flip.from(state, {
+                    absolute: true,
+                    duration: 0.3,
+                    ease: 'power2.out',
+                });
+            });
+        });
+
+        navMenu.addEventListener('mouseleave', function () {
+            const state = Flip.getState(navLinkShape, {
+                props: 'opacity',
+                simple: true,
+            });
+            navLinkShape.classList.remove('is-active');
+            Flip.from(state, {
+                absolute: true,
+                duration: 0.3,
+                ease: 'power2.out',
+                scale: true,
+            });
         });
     });
 });
