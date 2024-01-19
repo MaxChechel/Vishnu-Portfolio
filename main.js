@@ -1,5 +1,8 @@
 import Lenis from '@studio-freight/lenis';
 
+const worksLink = document.querySelector('#works-link');
+const contactLink = document.querySelector('#contact-link');
+
 const lenis = new Lenis({
     duration: 1.5,
     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(1 - t, 4)),
@@ -15,3 +18,11 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+//Scroll to for navigation links on click
+worksLink.addEventListener('click', () => {
+    lenis.scrollTo('#projects');
+});
+contactLink.addEventListener('click', () => {
+    lenis.scrollTo('#bottom');
+});
