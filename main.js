@@ -1,34 +1,49 @@
 import Lenis from '@studio-freight/lenis';
+import imagesLoaded from 'imagesloaded';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
 
 gsap.registerPlugin('ScrollTrigger');
 
 document.addEventListener('DOMContentLoaded', () => {
-    const lenis = new Lenis({
-        duration: 1.5,
-        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(1 - t, 4)),
-        direction: 'vertical',
-        smooth: true,
-        smoothTouch: false,
-        touchMultiplier: 1.5,
+    //Window to top on page refresh
+    let isRefreshing = false;
+    window.addEventListener('beforeunload', function () {
+        isRefreshing = true;
+    });
+    window.addEventListener('unload', function () {
+        if (isRefreshing) {
+            window.scrollTo(0, 0);
+        }
     });
 
-    lenis.on('scroll', ScrollTrigger.update);
+    imagesLoaded('.page-wrapper', () => {
+        const lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => (t === 1 ? 1 : 1 - Math.pow(1 - t, 4)),
+            direction: 'vertical',
+            smooth: true,
+            smoothTouch: false,
+            touchMultiplier: 1.5,
+        });
 
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-    });
+        lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.lagSmoothing(0);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
 
-    //Scroll to for navigation links on click
-    worksLink.addEventListener('click', () => {
-        lenis.scrollTo('#projects');
-    });
-    contactLink.addEventListener('click', () => {
-        lenis.scrollTo('#bottom');
+        gsap.ticker.lagSmoothing(0);
+
+        //Scroll to for navigation links on click
+        worksLink.addEventListener('click', () => {
+            lenis.scrollTo('#projects');
+        });
+        contactLink.addEventListener('click', () => {
+            lenis.scrollTo('#bottom');
+        });
     });
 });
