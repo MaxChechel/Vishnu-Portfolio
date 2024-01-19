@@ -16,6 +16,7 @@
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
-        "@studio-freight/lenis": "^1.0.33"
+        "@studio-freight/lenis": "^1.0.33",
+        "gsap": "^3.12.5"
     }
 }

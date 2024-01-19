@@ -1,7 +1,10 @@
 import Lenis from '@studio-freight/lenis';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
+
+gsap.registerPlugin('ScrollTrigger');
 
 document.addEventListener('DOMContentLoaded', () => {
     const lenis = new Lenis({
@@ -13,12 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         touchMultiplier: 1.5,
     });
 
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
+    lenis.on('scroll', ScrollTrigger.update);
 
-    requestAnimationFrame(raf);
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 
     //Scroll to for navigation links on click
     worksLink.addEventListener('click', () => {
