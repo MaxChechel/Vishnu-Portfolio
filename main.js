@@ -10,7 +10,7 @@ const navLinks = document.querySelectorAll('.navbar_link');
 const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
 
-gsap.registerPlugin('ScrollTrigger', 'Flip');
+gsap.registerPlugin(ScrollTrigger, Flip);
 
 let mm = gsap.matchMedia();
 
