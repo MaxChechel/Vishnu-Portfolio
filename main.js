@@ -83,22 +83,37 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.ticker.lagSmoothing(0);
 
         //Stats section
+        const countNums = statsSection.querySelectorAll('[data-count]');
+        let followersNum = statsSection.querySelectorAll(
+            "[data-count='followers']"
+        );
+        let likesNum = statsSection.querySelectorAll("[data-count='likes']");
+        let shotssNum = statsSection.querySelectorAll("[data-count='shots']");
+
         ScrollTrigger.create({
             trigger: statsSection,
             start: 'top 40%',
             once: true,
             onEnter: () => {
-                gsap.to("[data-count='followers']", {
-                    duration: 2, // Duration of the animation in seconds
-                    innerHTML: 100, // Target number
-                    snap: 'innerHTML', // Snap to integer values
-                    ease: 'none', // Type of easing (can be adjusted)
-                    onUpdate: function () {
-                        // Update the displayed value during the animation
-                        document.querySelector(
-                            "[data-count='followers']"
-                        ).innerHTML = Math.ceil(this.targets()[0].innerHTML);
-                    },
+                countNums.forEach((item) => {
+                    let finalNum;
+                    if (item.getAttribute('data-count') === 'followers')
+                        finalNum = followersNum;
+                    if (item.getAttribute('data-count') === 'likes')
+                        finalNum = likesNum;
+                    if (item.getAttribute('data-count') === 'shots')
+                        finalNum = shotssNum;
+                    gsap.to(item, {
+                        duration: 2,
+                        innerHTML: finalNum,
+                        snap: 'innerHTML',
+                        ease: 'none',
+                        onUpdate: function () {
+                            item.innerHTML = Math.ceil(
+                                this.targets()[0].innerHTML
+                            );
+                        },
+                    });
                 });
             },
         });
