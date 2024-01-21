@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'power2.out',
                 stagger: { each: 0.01 },
             },
-            0.3
+            0.2
         );
 
     aboutLink.addEventListener('click', (e) => {
