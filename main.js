@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //Stats section
         const countNums = statsSection.querySelectorAll('[data-count]');
+        //Get number that should be displayed
         let followersNum = statsSection.querySelectorAll(
             "[data-count='followers']"
         ).textContent;
@@ -93,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let shotssNum = statsSection.querySelectorAll(
             "[data-count='shots']"
         ).textContent;
+        //Set start number
         countNums.forEach((item) => {
             let startNum;
             if (item.getAttribute('data-count') === 'followers') startNum = 10;
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         finalNum = likesNum;
                     if (item.getAttribute('data-count') === 'shots')
                         finalNum = shotssNum;
+                    console.log(finalNum);
                     gsap.to(item, {
                         duration: 2,
                         innerHTML: finalNum,
