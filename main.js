@@ -165,19 +165,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
+        aboutMenu.classList.add('is-opened');
         aboutMenuOpenTl.restart();
         lenis.stop();
     });
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
-        if (!aboutMenuOpenTl.isActive()) {
+        if (
+            !aboutMenuOpenTl.isActive() &&
+            aboutMenu.classList.contains('is-opened')
+        ) {
+            aboutMenu.classList.remove('is-opened');
             aboutMenuCloseTl.restart();
             lenis.start();
             aboutLink.focus();
         }
     });
     aboutOverlay.addEventListener('click', (e) => {
-        if (!aboutMenuOpenTl.isActive()) {
+        if (
+            !aboutMenuOpenTl.isActive() &&
+            aboutMenu.classList.contains('is-opened')
+        ) {
+            aboutMenu.classList.remove('is-opened');
             aboutMenuCloseTl.restart();
             lenis.start();
             aboutLink.focus();
@@ -186,7 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //Accessibility for about
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-            if (!aboutMenuOpenTl.isActive()) {
+            if (
+                !aboutMenuOpenTl.isActive() &&
+                aboutMenu.classList.contains('is-opened')
+            ) {
+                aboutMenu.classList.remove('is-opened');
                 aboutMenuCloseTl.restart();
                 lenis.start();
                 aboutLink.focus();
