@@ -177,10 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutMenuCloseTl.restart();
         lenis.start();
     });
+    //Accessibility for about
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             aboutMenuCloseTl.restart();
             lenis.start();
+            aboutLink.focus();
         }
     });
 });
