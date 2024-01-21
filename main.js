@@ -22,20 +22,12 @@ const projectsSections = document.querySelectorAll('.project_cms-item');
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 let mm = gsap.matchMedia();
-let lenis;
 
 document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
     projectsSections.forEach((section) => {
         const slug = section.getAttribute('data-project-slug');
         section.setAttribute('id', slug);
-    });
-    //Projects links
-    projectsLinkListItem.forEach((link) => {
-        const slug = link.getAttribute('data-project-slug');
-        link.addEventListener('click', () => {
-            lenis.scrollTo('#slug');
-        });
     });
 
     //Nav menu bg change on scroll
@@ -59,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo(0, 0);
         }
     });
-
+    let lenis;
     imagesLoaded('.page-wrapper', () => {
         lenis = new Lenis({
             duration: 1.1,
@@ -83,6 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         contactLink.addEventListener('click', () => {
             lenis.scrollTo('#bottom');
+        });
+        //Projects links
+        projectsLinkListItem.forEach((link) => {
+            const slug = link.getAttribute('data-project-slug');
+            link.addEventListener('click', () => {
+                lenis.scrollTo('#slug');
+            });
         });
     });
 
