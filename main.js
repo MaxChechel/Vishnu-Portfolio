@@ -8,7 +8,7 @@ const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
 const aboutLink = document.querySelector('#about-link');
 const aboutMenuClose = document.querySelector('.about_top-row .button');
-
+const aboutOverlay = document.querySelector('.bg-overlay');
 const navLinks = document.querySelectorAll('.navbar_link');
 const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
@@ -159,7 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
-
+        aboutMenuCloseTl.restart();
+    });
+    aboutOverlay.addEventListener('click', (e) => {
         aboutMenuCloseTl.restart();
     });
 });
