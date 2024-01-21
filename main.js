@@ -93,7 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let shotssNum = statsSection.querySelectorAll(
             "[data-count='shots']"
         ).textContent;
+        countNums.forEach((item) => {
+            let startNum;
+            if (item.getAttribute('data-count') === 'followers') startNum = 10;
+            if (item.getAttribute('data-count') === 'likes') startNum = 70;
+            if (item.getAttribute('data-count') === 'shots') startNum = 240;
 
+            item.textContent = startNum;
+        });
         ScrollTrigger.create({
             trigger: statsSection,
             start: 'top 40%',
