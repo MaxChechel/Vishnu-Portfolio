@@ -19,6 +19,17 @@ gsap.registerPlugin(ScrollTrigger, Flip);
 let mm = gsap.matchMedia();
 
 document.addEventListener('DOMContentLoaded', () => {
+    //Nav menu bg change on scroll
+    const navMenuTl = gsap.timeline();
+    navMenuTl.to(navMenu, {
+        background: 'rgba(255, 255, 255, .8)',
+        duration: 0.4,
+        scrollTrigger: {
+            trigger: navMenu,
+            start: 'top +=50',
+        },
+    });
+
     //Window to top on page refresh
     let isRefreshing = false;
     window.addEventListener('beforeunload', function () {
