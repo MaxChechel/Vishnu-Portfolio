@@ -67,11 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Nav menu bg change on scroll
-    gsap.to(navMenu, {
+    let nav = navMenu;
+    mm.add('(max-width: 479px)', () => {
+        nav = document.querySelector('.navbar_component');
+    });
+    gsap.to(nav, {
         background: 'rgba(255, 255, 255, .8)',
         duration: 0.6,
         scrollTrigger: {
-            trigger: navMenu,
+            trigger: nav,
             start: '+=50',
             toggleActions: 'play none none reverse',
         },
