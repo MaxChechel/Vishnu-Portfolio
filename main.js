@@ -118,9 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 1,
                 x: '0%',
                 duration: 0.5,
-                stagger: { each: 0.05 },
+                ease: 'power4.out',
+                stagger: { each: 0.01 },
             },
-            0.4
+            0.2
         );
 
     aboutLink.addEventListener('click', (e) => {
