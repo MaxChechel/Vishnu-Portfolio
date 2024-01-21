@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const split = new SplitType(projectsHeadings, {
         type: 'chars,words,lines',
     });
+    gsap.set(split.chars, { opacity: 0.25 });
     projectsSections.forEach((section, i) => {
         const slug = section.getAttribute('data-project-slug');
         const currentOrder = section.querySelector('.text-caption:first-child');
@@ -43,6 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //Set id
         section.setAttribute('id', slug);
+
+        //ScrollTrigger for headings reveal
+        ScrollTrigger.create({
+            trigger: section,
+            start: 'top 50%',
+            once: true,
+            onEnter: () => {
+                gsap.to(section.querySelectorAll('.char'), {
+                    opacity: 1,
+                    stagger: { amount: 0.1 },
+                });
+            },
+        });
     });
     //Projects links
     projectsLinkListItem.forEach((link) => {
