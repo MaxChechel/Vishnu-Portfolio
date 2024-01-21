@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //About menu
     const aboutMenuOpenTl = gsap.timeline({ paused: true });
+    const aboutMenuCloseTl = gsap.timeline({ paused: true });
 
     gsap.set('[data-about-inner]', {
         x: '3%',
@@ -124,6 +125,23 @@ document.addEventListener('DOMContentLoaded', () => {
             0.15
         );
 
+    aboutMenuCloseTl
+        .to('[data-about-inner]', {
+            opacity: 0,
+            x: '3%',
+            duration: 0.5,
+            ease: 'power2.in',
+        })
+        .to(
+            aboutMenu,
+            {
+                width: '0%',
+                duration: 1,
+                ease: 'power3.in',
+            },
+            0.2
+        );
+
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -132,6 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
 
-        aboutMenuOpenTl.reverse();
+        aboutMenuCloseTl.restart();
     });
 });
