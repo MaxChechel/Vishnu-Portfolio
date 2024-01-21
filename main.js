@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo(0, 0);
         }
     });
-
+    let lenis;
     imagesLoaded('.page-wrapper', () => {
-        const lenis = new Lenis({
+        lenis = new Lenis({
             duration: 1.1,
             direction: 'vertical',
             smooth: true,
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.5,
                 ease: 'power2.out',
             },
-            '0%'
+            0.1
         )
         .to(
             '.bg-overlay',
@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
         aboutMenuOpenTl.restart();
+        lenis.stop();
     });
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
