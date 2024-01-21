@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Nav menu bg change on scroll
     let nav = navMenu;
     mm.add('(max-width: 479px)', () => {
-        nav = document.querySelector('.navbar_component');
+        nav = document.querySelector('.navbar_container');
     });
     gsap.to(nav, {
         background: 'rgba(255, 255, 255, .8)',
