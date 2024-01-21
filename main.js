@@ -97,7 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
             width: '100%',
             duration: 2,
             ease: 'expo.out',
-        });
+        }).to(
+            '.bg-overlay',
+            {
+                opacity: 1,
+                duration: 0.5,
+            },
+            0.3
+        );
 
         tl.play();
     });
