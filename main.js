@@ -29,7 +29,7 @@ let lenis;
 document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
     //Initial state for headings
-    const split = new SplitText(projectsSections.querySelectorAll('h3'), {
+    const split = new SplitText(projectsSections.querySelectorAll('h3 span'), {
         type: 'chars,words,lines',
     });
     projectsSections.forEach((section, i) => {
