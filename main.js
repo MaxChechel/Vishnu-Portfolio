@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             onEnter: () => {
                 gsap.to(section.querySelectorAll('.char'), {
                     opacity: 1,
-                    stagger: { each: 0.05 },
+                    stagger: { each: 0.025 },
                 });
             },
         });
