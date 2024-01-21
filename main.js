@@ -3,7 +3,7 @@ import imagesLoaded from 'imagesloaded';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
-import { SplitText } from 'gsap/SplitText';
+import SplitText from 'gsap/src/SplitText';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
