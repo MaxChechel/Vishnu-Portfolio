@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const slug = section.getAttribute('data-project-slug');
         const currentOrder = section.querySelector('.text-caption:first-child');
         const sectionsCount = section.querySelector('.text-caption:last-child');
-        currentOrder.textContent = i + 1;
-        sectionsCount.textContent = projectsSections.length + 1;
+        currentOrder.textContent = `0${i + 1}`;
+        sectionsCount.textContent = `0${projectsSections.length + 1}`;
         section.setAttribute('id', slug);
     });
     //Projects links
