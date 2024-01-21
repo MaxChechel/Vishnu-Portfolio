@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tl.to(aboutMenu, {
             width: '100%',
-            duration: 1,
+            duration: 1.5,
             ease: 'expo.out',
         });
 
