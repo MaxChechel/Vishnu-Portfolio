@@ -6,9 +6,11 @@ import Flip from 'gsap/dist/Flip';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
+const aboutLink = document.querySelector('#about-link');
 const navLinks = document.querySelectorAll('.navbar_link');
 const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
+const aboutMenu = document.querySelector('.about_component');
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -84,5 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 scale: true,
             });
         });
+    });
+
+    //About menu
+    aboutLink.addEventListener('click', () => {
+        const tl = gsap.timeline({ paused: true });
+
+        tl.to(aboutMenu, {
+            width: '100%',
+        });
+
+        tl.play();
     });
 });
