@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .to(aboutMenu, {
             width: '0%',
             duration: 0.8,
-            ease: 'power3.in',
+            ease: 'power3.out',
         })
         .to(
             '[data-about-inner]',
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 0,
                 x: '3%',
                 duration: 0.5,
-                ease: 'power2.in',
+                ease: 'power2.out',
             },
             '0%'
         )
