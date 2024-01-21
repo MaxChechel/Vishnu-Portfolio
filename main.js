@@ -1,9 +1,9 @@
 import Lenis from '@studio-freight/lenis';
 import imagesLoaded from 'imagesloaded';
+import SplitType from 'split-type';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
-import { SplitText } from 'gsap/dist/SplitText';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
@@ -21,7 +21,7 @@ const projectsLinkListItem = document.querySelectorAll(
 );
 const projectsSections = document.querySelectorAll('.project_cms-item');
 
-gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
+gsap.registerPlugin(ScrollTrigger, Flip);
 
 let mm = gsap.matchMedia();
 let lenis;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
     //Initial state for headings
     const projectsHeadings = projectsSections.querySelectorAll('h3 span');
-    const split = new SplitText(projectsHeadings, {
+    const split = new SplitType(projectsHeadings, {
         type: 'chars,words,lines',
     });
     projectsSections.forEach((section, i) => {
