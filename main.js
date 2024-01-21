@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.4,
                 pointerEvents: 'none',
             },
-            0.2
+            '<90%'
         );
 
     aboutLink.addEventListener('click', (e) => {
