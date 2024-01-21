@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsLinkListItem.forEach((link) => {
         const slug = link.getAttribute('data-project-slug');
         link.addEventListener('click', () => {
-            lenis.scrollTo(`'#'slug`);
+            lenis.scrollTo(`'#'${slug}`);
         });
     });
 
