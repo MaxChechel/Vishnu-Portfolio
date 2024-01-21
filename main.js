@@ -22,6 +22,7 @@ const projectsSections = document.querySelectorAll('.project_cms-item');
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 let mm = gsap.matchMedia();
+let lenis;
 
 document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo(0, 0);
         }
     });
-    let lenis;
+
     imagesLoaded('.page-wrapper', () => {
         lenis = new Lenis({
             duration: 1.1,
