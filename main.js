@@ -165,9 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
-        aboutMenu.classList.add('is-opened');
-        aboutMenuOpenTl.restart();
-        lenis.stop();
+        if (!aboutMenu.classList.contains('is-opened')) {
+            aboutMenu.classList.add('is-opened');
+            aboutMenuOpenTl.restart();
+            lenis.stop();
+        }
     });
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
