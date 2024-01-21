@@ -7,6 +7,8 @@ import Flip from 'gsap/dist/Flip';
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
 const aboutLink = document.querySelector('#about-link');
+const aboutMenuClose = document.querySelector('.about_top-row .button');
+
 const navLinks = document.querySelectorAll('.navbar_link');
 const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
@@ -89,32 +91,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //About menu
-    aboutLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const tl = gsap.timeline({ paused: true });
+    const aboutMenuTl = gsap.timeline({ paused: true });
 
-        tl.to(aboutMenu, {
+    aboutMenuTl
+        .to(aboutMenu, {
             width: '100%',
             duration: 1.5,
             ease: 'power3.out',
         })
-            .to(
-                '.bg-overlay',
-                {
-                    opacity: 1,
-                    duration: 0.3,
-                },
-                0.2
-            )
-            .to(
-                '.about_inner-wrap',
-                {
-                    opacity: 1,
-                    duration: 0.5,
-                },
-                0.4
-            );
+        .to(
+            '.bg-overlay',
+            {
+                opacity: 1,
+                duration: 0.3,
+            },
+            0.2
+        )
+        .to(
+            '.about_inner-wrap',
+            {
+                opacity: 1,
+                duration: 0.5,
+            },
+            0.4
+        );
 
-        tl.play();
+    aboutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        aboutMenuTl.restart();
+    });
+    aboutMenuClose.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        aboutMenuTl.reverse();
     });
 });
