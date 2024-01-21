@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutMenuTl = gsap.timeline({ paused: true });
 
     gsap.set('.about_inner-wrap', {
-        x: '-20%',
+        x: '20%',
     });
 
     aboutMenuTl
