@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //About menu
     const aboutMenuOpenTl = gsap.timeline({ paused: true });
 
-    gsap.set('.about_inner-wrap div', {
+    gsap.set('.about_inner-wrap', {
         x: '5%',
         opacity: 0,
     });
@@ -113,13 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
             0.1
         )
         .to(
-            '.about_inner-wrap div',
+            '.about_inner-wrap',
             {
                 opacity: 1,
                 x: '0%',
                 duration: 1,
                 ease: 'power2.out',
-                stagger: { each: 0.01, from: 'start' },
             },
             0
         );
