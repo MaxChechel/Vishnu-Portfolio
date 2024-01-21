@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 1,
                 x: '0%',
-                duration: 0.75,
+                duration: 1,
                 ease: 'power2.out',
                 stagger: { each: 0.01 },
             },
-            0.2
+            0.25
         );
 
     aboutLink.addEventListener('click', (e) => {
