@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.5,
                 ease: 'power2.out',
             },
-            0.1
+            0.2
         )
         .to(
             '.bg-overlay',
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.4,
                 pointerEvents: 'none',
             },
-            '<90%'
+            '<75%'
         );
 
     aboutLink.addEventListener('click', (e) => {
@@ -160,8 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
         aboutMenuCloseTl.restart();
+        lenis.start();
     });
     aboutOverlay.addEventListener('click', (e) => {
         aboutMenuCloseTl.restart();
+        lenis.start();
     });
 });
