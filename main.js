@@ -97,14 +97,23 @@ document.addEventListener('DOMContentLoaded', () => {
             width: '100%',
             duration: 2,
             ease: 'power3.out',
-        }).to(
-            '.bg-overlay',
-            {
-                opacity: 1,
-                duration: 0.3,
-            },
-            0.2
-        );
+        })
+            .to(
+                '.bg-overlay',
+                {
+                    opacity: 1,
+                    duration: 0.3,
+                },
+                0.2
+            )
+            .to(
+                '.about_inner-wrap',
+                {
+                    opacity: 1,
+                    duration: 0.5,
+                },
+                1
+            );
 
         tl.play();
     });
