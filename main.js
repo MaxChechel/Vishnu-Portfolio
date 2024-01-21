@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Nav menu bg change on scroll
     gsap.to(navMenu, {
         background: 'rgba(255, 255, 255, .8)',
-        duration: 0.4,
+        duration: 1,
         scrollTrigger: {
             trigger: navMenu,
             start: '+=50',
