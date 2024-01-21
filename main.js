@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
     //Initial state for headings
     const projectsHeadings = projectsSections.querySelectorAll('h3 span');
-    const split = new SplitText(projectsHeadings, {
+    const split = new SplitText('h1', {
         type: 'chars,words,lines',
     });
     projectsSections.forEach((section, i) => {
