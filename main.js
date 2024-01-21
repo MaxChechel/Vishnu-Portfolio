@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuOpenTl
         .to(aboutMenu, {
             width: '100%',
-            duration: 1,
+            duration: 1.2,
             ease: 'power3.out',
         })
         .to(
@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 1,
                 x: '0%',
-                duration: 0.5,
-                ease: 'power4.out',
-                stagger: { each: 0.01 },
+                duration: 0.75,
+                ease: 'power2.out',
+                stagger: { each: 0.02 },
             },
-            0.2
+            0.4
         );
 
     aboutLink.addEventListener('click', (e) => {
