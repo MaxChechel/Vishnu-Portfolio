@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 1,
                 duration: 0.6,
             },
-            0.1
+            0
         )
         .to(
             '.about_inner-wrap',
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 1,
                 ease: 'power2.out',
             },
-            0
+            0.2
         );
 
     aboutLink.addEventListener('click', (e) => {
