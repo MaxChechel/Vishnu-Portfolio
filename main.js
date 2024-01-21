@@ -13,7 +13,7 @@ const navLinks = document.querySelectorAll('.navbar_link');
 const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
 const aboutMenu = document.querySelector('.about_component');
-const statsSection = document.querySelector('.data-count');
+const statsSection = document.querySelector('.section_stats');
 
 const projectsLinkListItem = document.querySelectorAll(
     '.header_projects-list-item'
@@ -65,28 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //Stats section
-
-    ScrollTrigger.create({
-        trigger: statsSection,
-        start: 'top 40%',
-        once: true,
-        onEnter: () => {
-            gsap.to("[data-count='followers']", {
-                duration: 2, // Duration of the animation in seconds
-                innerHTML: 100, // Target number
-                snap: 'innerHTML', // Snap to integer values
-                ease: 'none', // Type of easing (can be adjusted)
-                onUpdate: function () {
-                    // Update the displayed value during the animation
-                    document.querySelector(
-                        "[data-count='followers']"
-                    ).innerHTML = Math.ceil(this.targets()[0].innerHTML);
-                },
-            });
-        },
-    });
-
     imagesLoaded('.page-wrapper', () => {
         lenis = new Lenis({
             duration: 1.1,
@@ -103,6 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         gsap.ticker.lagSmoothing(0);
+
+        //Stats section
+        ScrollTrigger.create({
+            trigger: statsSection,
+            start: 'top 40%',
+            once: true,
+            onEnter: () => {
+                gsap.to("[data-count='followers']", {
+                    duration: 2, // Duration of the animation in seconds
+                    innerHTML: 100, // Target number
+                    snap: 'innerHTML', // Snap to integer values
+                    ease: 'none', // Type of easing (can be adjusted)
+                    onUpdate: function () {
+                        // Update the displayed value during the animation
+                        document.querySelector(
+                            "[data-count='followers']"
+                        ).innerHTML = Math.ceil(this.targets()[0].innerHTML);
+                    },
+                });
+            },
+        });
 
         //Scroll to for navigation links on click
         worksLink.addEventListener('click', () => {
