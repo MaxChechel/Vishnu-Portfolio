@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
         //Stats section
         const countNums = statsSection.querySelectorAll('[data-count]');
         //Get number that should be displayed
-        let followersNum = statsSection.querySelectorAll(
+        let followersNum = statsSection.querySelector(
             "[data-count='followers']"
         ).textContent;
-        let likesNum = statsSection.querySelectorAll(
+        let likesNum = statsSection.querySelector(
             "[data-count='likes']"
         ).textContent;
-        let shotssNum = statsSection.querySelectorAll(
+        let shotssNum = statsSection.querySelector(
             "[data-count='shots']"
         ).textContent;
         //Set start number
