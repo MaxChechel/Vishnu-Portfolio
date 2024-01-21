@@ -91,13 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //About menu
-    const aboutMenuTl = gsap.timeline({ paused: true });
+    const aboutMenuOpenTl = gsap.timeline({ paused: true });
 
-    gsap.set('.about_inner-wrap', {
-        x: '20%',
+    gsap.set('.about_inner-wrap div', {
+        x: '10%',
+        opacity: 0,
     });
 
-    aboutMenuTl
+    aboutMenuOpenTl
         .to(aboutMenu, {
             width: '100%',
             duration: 1,
@@ -112,11 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
             0.2
         )
         .to(
-            '.about_inner-wrap',
+            '.about_inner-wrap div',
             {
                 opacity: 1,
                 x: '0%',
                 duration: 0.5,
+                stagger: { each: 0.05 },
             },
             0.4
         );
@@ -124,11 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
 
-        aboutMenuTl.restart();
+        aboutMenuOpenTl.restart();
     });
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
 
-        aboutMenuTl.reverse();
+        aboutMenuOpenTl.reverse();
     });
 });
