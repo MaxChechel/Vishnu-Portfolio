@@ -170,19 +170,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     aboutMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
-        aboutMenuCloseTl.restart();
-        lenis.start();
+        if (!aboutMenuOpenTl.isActive()) {
+            aboutMenuCloseTl.restart();
+            lenis.start();
+            aboutLink.focus();
+        }
     });
     aboutOverlay.addEventListener('click', (e) => {
-        aboutMenuCloseTl.restart();
-        lenis.start();
+        if (!aboutMenuOpenTl.isActive()) {
+            aboutMenuCloseTl.restart();
+            lenis.start();
+            aboutLink.focus();
+        }
     });
     //Accessibility for about
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-            aboutMenuCloseTl.restart();
-            lenis.start();
-            aboutLink.focus();
+            if (!aboutMenuOpenTl.isActive()) {
+                aboutMenuCloseTl.restart();
+                lenis.start();
+                aboutLink.focus();
+            }
         }
     });
 });
