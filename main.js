@@ -137,10 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutMenu,
             {
                 width: '0%',
-                duration: 1,
+                duration: 0.8,
                 ease: 'power3.in',
             },
-            0.2
+            0
         )
         .to(
             '.bg-overlay',
