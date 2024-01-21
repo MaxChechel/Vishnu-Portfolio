@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuCloseTl
         .to(aboutMenu, {
             width: '0%',
-            duration: 0.4,
+            duration: 0.5,
             ease: 'power3.out',
         })
         .to(
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 0,
                 x: '3%',
-                duration: 0.5,
+                duration: 0.7,
                 ease: 'power2.out',
             },
             0.2
