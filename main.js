@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         finalNum = shotssNum;
                     console.log(finalNum);
                     gsap.to(item, {
-                        duration: 2,
+                        duration: 1.5,
                         innerHTML: finalNum,
                         snap: 'innerHTML',
                         ease: 'none',
