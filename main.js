@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
     projectsSections.forEach((section, i) => {
         const slug = section.getAttribute('data-project-slug');
-        const currentOrder = section.querySelector('text-caption:first-child');
-        const sectionsCount = section.querySelector('text-caption:last-child');
+        const currentOrder = section.querySelector('.text-caption:first-child');
+        const sectionsCount = section.querySelector('.text-caption:last-child');
         currentOrder.textContent = i;
         sectionsCount.textContent = projectsSections.length + 1;
         section.setAttribute('id', slug);
