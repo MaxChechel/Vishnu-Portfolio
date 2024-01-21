@@ -89,7 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //About menu
-    aboutLink.addEventListener('click', () => {
+    aboutLink.addEventListener('click', (e) => {
+        e.preventDefault();
         const tl = gsap.timeline({ paused: true });
 
         tl.to(aboutMenu, {
