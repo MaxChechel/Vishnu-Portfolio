@@ -29,7 +29,7 @@ let lenis;
 document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
     //Initial state for headings
-    const projectsHeadings = projectsSections.querySelectorAll('h3 span');
+    const projectsHeadings = document.querySelectorAll('.project_cms-item h3');
     const split = new SplitType(projectsHeadings, {
         type: 'chars,words,lines',
     });
