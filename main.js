@@ -127,20 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
     aboutMenuCloseTl
-        .to('[data-about-inner]', {
-            opacity: 0,
-            x: '3%',
-            duration: 0.5,
-            ease: 'power2.in',
+        .to(aboutMenu, {
+            width: '0%',
+            duration: 0.8,
+            ease: 'power3.in',
         })
         .to(
-            aboutMenu,
+            '[data-about-inner]',
             {
-                width: '0%',
-                duration: 0.8,
-                ease: 'power3.in',
+                opacity: 0,
+                x: '3%',
+                duration: 0.5,
+                ease: 'power2.in',
             },
-            0
+            '0%'
         )
         .to(
             '.bg-overlay',
