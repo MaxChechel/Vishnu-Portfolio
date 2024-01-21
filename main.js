@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '.bg-overlay',
             {
                 opacity: 1,
-                duration: 0.3,
+                duration: 0.6,
             },
             0.1
         )
