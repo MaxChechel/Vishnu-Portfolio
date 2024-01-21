@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 0.4,
         scrollTrigger: {
             trigger: navMenu,
-            start: 'top +=50',
+            start: '+=50',
+            toggleActions: 'play none none reverse',
         },
     });
 
