@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 1,
                 duration: 0.6,
+                pointerEvents: 'all',
             },
             0
         )
@@ -138,6 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 width: '0%',
                 duration: 1,
                 ease: 'power3.in',
+            },
+            0.2
+        )
+        .to(
+            '.bg-overlay',
+            {
+                opacity: 0,
+                duration: 0.4,
+                pointerEvents: 'none',
             },
             0.2
         );
