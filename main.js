@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuOpenTl
         .to(aboutMenu, {
             width: '100%',
-            duration: 1.2,
+            duration: 1.5,
             ease: 'power3.out',
         })
         .to(
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 1,
                 duration: 0.3,
             },
-            0.2
+            0.1
         )
         .to(
             '.about_inner-wrap div',
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 x: '0%',
                 duration: 0.75,
                 ease: 'power2.out',
-                stagger: { each: 0.02 },
+                stagger: { each: 0.01 },
             },
             0.3
         );
