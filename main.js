@@ -14,11 +14,29 @@ const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
 const aboutMenu = document.querySelector('.about_component');
 
+const projectsLinkListItem = document.querySelectorAll(
+    '.header_projects-list-item'
+);
+const projectsSections = document.querySelectorAll('.project_cms-item');
+
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 let mm = gsap.matchMedia();
 
 document.addEventListener('DOMContentLoaded', () => {
+    //Projects sections
+    projectsSections.forEach((section) => {
+        const slug = section.getAttribute('data-project-slug');
+        section.setAttribute('id', slug);
+    });
+    //Projects links
+    projectsLinkListItem.forEach((link) => {
+        const slug = link.getAttribute('data-project-slug');
+        link.addEventListener('click', () => {
+            lenis.scrollTo('#slug');
+        });
+    });
+
     //Nav menu bg change on scroll
     gsap.to(navMenu, {
         background: 'rgba(255, 255, 255, .8)',
