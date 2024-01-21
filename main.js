@@ -177,4 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutMenuCloseTl.restart();
         lenis.start();
     });
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            aboutMenuCloseTl.restart();
+            lenis.start();
+        }
+    });
 });
