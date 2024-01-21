@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentOrder = section.querySelector('.text-caption:first-child');
         const sectionsCount = section.querySelector('.text-caption:last-child');
         currentOrder.textContent = `0${i + 1}`;
-        sectionsCount.textContent = `0${projectsSections.length + 1}`;
+        sectionsCount.textContent = `0${projectsSections.length}`;
         section.setAttribute('id', slug);
     });
     //Projects links
