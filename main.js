@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuCloseTl
         .to(aboutMenu, {
             width: '0%',
-            duration: 0.8,
+            duration: 0.4,
             ease: 'power3.out',
         })
         .to(
@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
-
         aboutMenuOpenTl.restart();
     });
     aboutMenuClose.addEventListener('click', (e) => {
