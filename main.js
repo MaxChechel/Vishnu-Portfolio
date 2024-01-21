@@ -28,12 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     imagesLoaded('.page-wrapper', () => {
         const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) =>
-                t < 0.5
-                    ? 16 * t * t * t * t * t
-                    : 1 - Math.pow(-2 * t + 2, 5) / 2,
-
+            duration: 1.1,
             direction: 'vertical',
             smooth: true,
             smoothTouch: false,
