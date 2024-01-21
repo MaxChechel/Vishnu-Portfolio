@@ -21,7 +21,7 @@ const projectsLinkListItem = document.querySelectorAll(
 );
 const projectsSections = document.querySelectorAll('.project_cms-item');
 
-gsap.registerPlugin(ScrollTrigger, Flip);
+gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
 
 let mm = gsap.matchMedia();
 let lenis;
