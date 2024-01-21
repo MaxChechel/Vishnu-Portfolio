@@ -96,14 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         tl.to(aboutMenu, {
             width: '100%',
             duration: 2,
-            ease: 'expo.out',
+            ease: 'power3.out',
         }).to(
             '.bg-overlay',
             {
                 opacity: 1,
-                duration: 0.5,
+                duration: 0.3,
             },
-            0.3
+            0.2
         );
 
         tl.play();
