@@ -3,6 +3,7 @@ import imagesLoaded from 'imagesloaded';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
+import { SplitText } from 'gsap/all';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
@@ -27,12 +28,19 @@ let lenis;
 
 document.addEventListener('DOMContentLoaded', () => {
     //Projects sections
+    //Initial state for headings
+    const split = new SplitText(projectsSections.querySelectorAll('h3'), {
+        type: 'chars,words,lines',
+    });
     projectsSections.forEach((section, i) => {
         const slug = section.getAttribute('data-project-slug');
         const currentOrder = section.querySelector('.text-caption:first-child');
         const sectionsCount = section.querySelector('.text-caption:last-child');
+        //Set order
         currentOrder.textContent = `0${i + 1}`;
         sectionsCount.textContent = `0${projectsSections.length}`;
+
+        //Set id
         section.setAttribute('id', slug);
     });
     //Projects links
