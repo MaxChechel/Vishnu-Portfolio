@@ -86,9 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const countNums = statsSection.querySelectorAll('[data-count]');
         let followersNum = statsSection.querySelectorAll(
             "[data-count='followers']"
-        );
-        let likesNum = statsSection.querySelectorAll("[data-count='likes']");
-        let shotssNum = statsSection.querySelectorAll("[data-count='shots']");
+        ).textContent;
+        let likesNum = statsSection.querySelectorAll(
+            "[data-count='likes']"
+        ).textContent;
+        let shotssNum = statsSection.querySelectorAll(
+            "[data-count='shots']"
+        ).textContent;
 
         ScrollTrigger.create({
             trigger: statsSection,
