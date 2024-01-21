@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 x: '0%',
                 duration: 0.9,
                 ease: 'power2.out',
-                stagger: { amount: 0.1 },
+                stagger: { amount: 1 },
             },
             0.15
         );
