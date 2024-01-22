@@ -37,12 +37,19 @@ export default function heroReveal() {
             },
             '<0%'
         )
-        .to('h1 .word', {
-            opacity: 1,
-            filter: 'blur(0px)',
-            duration: 0.6,
-            y: '0%',
-            ease: 'power4.out',
-            stagger: { each: 0.1 },
-        });
+        .to(
+            'h1 .word',
+            {
+                opacity: 1,
+                filter: 'blur(0px)',
+                duration: 0.6,
+                y: '0%',
+                transformOrigin: 'center center',
+                rotationX: 1,
+                rotationZ: 5,
+                ease: 'power4.out',
+                stagger: { each: 0.075 },
+            },
+            '<20%'
+        );
 }
