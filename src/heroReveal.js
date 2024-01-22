@@ -79,7 +79,7 @@ export default function heroReveal() {
         .to(
             '.header_projects-link-text',
             {
-                y: '%',
+                y: '0%',
                 duration: 0.6,
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
