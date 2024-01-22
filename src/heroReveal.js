@@ -51,5 +51,18 @@ export default function heroReveal() {
                 stagger: { each: 0.075 },
             },
             '<20%'
+        )
+        .to(
+            '.header_subtext .line',
+            {
+                opacity: 1,
+                filter: 'blur(0px)',
+                duration: 0.6,
+                y: '0%',
+                transformOrigin: 'center center',
+                ease: 'power4.out',
+                stagger: { each: 0.075 },
+            },
+            '<40%'
         );
 }
