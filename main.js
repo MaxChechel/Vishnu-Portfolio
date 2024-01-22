@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Initialize swiper slider
     const swiper = new Swiper('.swiper', {
         slidesPerView: 'auto',
-        spaceBetween: 30,
+        spaceBetween: 32,
     });
 
     imagesLoaded('.page-wrapper', () => {
