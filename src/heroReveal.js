@@ -14,18 +14,18 @@ export default function heroReveal() {
         .to('.loader', {
             delay: 0.4,
             height: '0%',
-            duration: 1,
-            ease: 'power3.out',
+            duration: 0.8,
+            ease: 'power4.inOut',
         })
         .to(
             '.loader_main-text',
             {
-                duration: 0.5,
+                duration: 0.4,
                 filter: 'blur(40px)',
                 opacity: 0,
                 ease: 'power4.in',
             },
-            '<10%'
+            '<'
         )
         .to(
             '.loader_bottom-text',
