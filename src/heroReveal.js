@@ -18,12 +18,13 @@ export default function heroReveal() {
             duration: 0.6,
             transformOrigin: 'center center',
             rotationX: 2,
-            filter: 'blur(5px)',
+            filter: 'blur(10px)',
             opacity: 0,
             y: '100%',
             ease: 'power4.in',
         })
         .to('.loader', {
+            delay: 0.1,
             height: '0%',
             duration: 1,
             ease: 'expo.out',
