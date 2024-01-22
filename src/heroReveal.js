@@ -16,12 +16,12 @@ export default function heroReveal() {
         .to('.loader_main-text', {
             delay: 0.4,
             duration: 0.8,
-            transformOrigin: 'center top',
+            transformOrigin: 'center center',
             rotationX: 2,
-            filter: 'blur(20px)',
+            filter: 'blur(5px)',
             opacity: 0,
             y: '100%',
-            ease: 'circ.out',
+            ease: 'power3.in",',
         })
         .to('.loader', {
             height: '0%',
