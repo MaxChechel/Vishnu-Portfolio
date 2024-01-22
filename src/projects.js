@@ -1,9 +1,9 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function projectSections(section) {
+export default function projectSections(selector) {
     gsap.set('.project_cms-item h3 .char', { opacity: 0.25 });
-    section.forEach((section, i) => {
+    selector.forEach((section, i) => {
         const slug = section.getAttribute('data-project-slug');
         const currentOrder = section.querySelector('.text-caption:first-child');
         const sectionsCount = section.querySelector('.text-caption:last-child');
