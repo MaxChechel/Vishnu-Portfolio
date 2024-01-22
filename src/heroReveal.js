@@ -16,7 +16,7 @@ export default function heroReveal() {
         .to('.loader', {
             delay: 0.4,
             height: '0%',
-            duration: 0.9,
+            duration: 1,
             ease: 'expo.out',
         })
         .to(
@@ -25,6 +25,7 @@ export default function heroReveal() {
                 duration: 0.4,
                 filter: 'blur(40px)',
                 opacity: 0,
+                y: '100%',
                 ease: 'power4.out',
             },
             '<'
