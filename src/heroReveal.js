@@ -62,8 +62,28 @@ export default function heroReveal() {
                 rotationZ: 0,
                 transformOrigin: 'left bottom',
                 ease: 'power4.out',
+                stagger: { each: 0.05 },
+            },
+            '<40%'
+        )
+        .to(
+            '.header_projects-list-link',
+            {
+                width: '100%',
+                duration: 0.6,
+                ease: 'power4.out',
                 stagger: { each: 0.075 },
             },
             '<40%'
+        )
+        .to(
+            '.header_projects-link-text',
+            {
+                y: '%',
+                duration: 0.6,
+                ease: 'power4.out',
+                stagger: { each: 0.075 },
+            },
+            '<20%'
         );
 }
