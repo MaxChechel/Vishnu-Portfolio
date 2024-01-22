@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const split = new SplitType('h1, .header_subtext ,.project_cms-item h3', {
         type: 'chars,words,lines',
     });
-    wrapLines('h1');
-    wrapLines('.header_subtext');
+    wrapLines('h1 .line');
+    wrapLines('.header_subtext .line');
 
     //Hero reveal
     heroReveal();
