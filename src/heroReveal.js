@@ -32,9 +32,9 @@ export default function heroReveal() {
         .to(
             '.loader_bottom-text',
             {
-                duration: 0.4,
+                duration: 0.3,
                 opacity: 0,
             },
-            '<'
+            '<0%'
         );
 }
