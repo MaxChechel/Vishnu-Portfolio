@@ -4,9 +4,10 @@ export default function heroReveal() {
     const tl = gsap.timeline();
 
     tl.to('.loader_main-text', {
+        delay: 0.2,
         opacity: 1,
         filter: 'blur(0px)',
-        duration: 0.6,
+        duration: 0.7,
         y: '0%',
         transformOrigin: 'center bottom',
         rotationX: 0,
@@ -16,7 +17,7 @@ export default function heroReveal() {
             delay: 0.4,
             height: '0%',
             duration: 0.9,
-            ease: 'power4.out',
+            ease: 'expo.out',
         })
         .to(
             '.loader_main-text',
@@ -24,7 +25,7 @@ export default function heroReveal() {
                 duration: 0.4,
                 filter: 'blur(40px)',
                 opacity: 0,
-                ease: 'power4.in',
+                ease: 'power4.out',
             },
             '<'
         )
