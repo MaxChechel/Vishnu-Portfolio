@@ -203,6 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //About menu
+    let documentWidth = window.innerWidth;
+    let aboutMenuTime = documentWidth / 1000;
     const aboutMenuOpenTl = gsap.timeline({ paused: true });
     const aboutMenuCloseTl = gsap.timeline({ paused: true });
 
@@ -214,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutMenuOpenTl
         .to(aboutMenu, {
             width: '100%',
-            duration: 1.5,
+            duration: aboutMenuTime,
             ease: 'power3.out',
         })
         .to(
