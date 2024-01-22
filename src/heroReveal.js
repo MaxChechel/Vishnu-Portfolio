@@ -102,5 +102,15 @@ export default function heroReveal() {
                 stagger: { each: 0.075 },
             },
             '<0%'
+        )
+        .to(
+            '.navbar_container',
+            {
+                y: '0%',
+                opacity: 1,
+                duration: 0.5,
+                ease: 'power4.out',
+            },
+            '<'
         );
 }
