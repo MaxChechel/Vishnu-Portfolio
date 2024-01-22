@@ -6,10 +6,11 @@ export default function heroReveal() {
     tl.to('.loader_main-text', {
         opacity: 1,
         filter: 'blur(0px)',
-        duration: 0.8,
+        duration: 0.6,
         y: '0%',
         transformOrigin: 'center bottom',
         rotationX: 0,
+        ease: 'power4.in',
     })
         .to('.loader', {
             delay: 0.4,
