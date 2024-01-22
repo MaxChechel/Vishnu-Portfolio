@@ -6,6 +6,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
 
+import wrapLines from './src/utils';
+import projectSections from './src/projects';
+
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
 const aboutLink = document.querySelector('#about-link');
@@ -28,37 +31,15 @@ let mm = gsap.matchMedia();
 let lenis;
 
 document.addEventListener('DOMContentLoaded', () => {
-    //Projects sections
-    //Initial state for headings
-    const projectsHeadings = document.querySelectorAll('.project_cms-item h3');
-    const split = new SplitType(projectsHeadings, {
+    //Split text
+    const split = new SplitType('h1, .header_subtext ,.project_cms-item h3', {
         type: 'chars,words,lines',
     });
-    gsap.set(split.chars, { opacity: 0.25 });
-    projectsSections.forEach((section, i) => {
-        const slug = section.getAttribute('data-project-slug');
-        const currentOrder = section.querySelector('.text-caption:first-child');
-        const sectionsCount = section.querySelector('.text-caption:last-child');
-        //Set order
-        currentOrder.textContent = `0${i + 1}`;
-        sectionsCount.textContent = `0${projectsSections.length}`;
+    wrapLines('h1');
+    wrapLines('.header_subtext');
 
-        //Set id
-        section.setAttribute('id', slug);
-
-        //ScrollTrigger for headings reveal
-        ScrollTrigger.create({
-            trigger: section,
-            start: 'top 50%',
-            once: true,
-            onEnter: () => {
-                gsap.to(section.querySelectorAll('.char'), {
-                    opacity: 1,
-                    stagger: { each: 0.01 },
-                });
-            },
-        });
-    });
+    //Projects sections
+    projectSections(projectsSections);
     //Projects links
     projectsLinkListItem.forEach((link) => {
         const slug = link.getAttribute('data-project-slug');
