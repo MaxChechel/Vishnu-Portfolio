@@ -14,14 +14,14 @@ export default function heroReveal() {
         ease: 'power4.out',
     })
         .to('.loader_main-text', {
-            delay: 0.4,
-            duration: 0.8,
+            delay: 0.3,
+            duration: 0.7,
             transformOrigin: 'center center',
             rotationX: 2,
             filter: 'blur(5px)',
             opacity: 0,
             y: '100%',
-            ease: 'power3.in",',
+            ease: 'power4.in',
         })
         .to('.loader', {
             height: '0%',
