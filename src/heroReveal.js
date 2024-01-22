@@ -122,6 +122,6 @@ export default function heroReveal() {
                 duration: 1,
                 ease: 'power4.out',
             },
-            '<0%'
+            '<40%'
         );
 }
