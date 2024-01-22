@@ -12,6 +12,7 @@ export default function heroReveal() {
         rotationX: 0,
     })
         .to('.loader', {
+            delay: 0.4,
             height: '0%',
             duration: 1,
             ease: 'power3.out',
@@ -19,11 +20,19 @@ export default function heroReveal() {
         .to(
             '.loader_main-text',
             {
-                y: '100%',
                 duration: 0.5,
+                filter: 'blur(40px)',
                 opacity: 0,
-                rotationX: 2,
+                ease: 'power4.in',
             },
-            '<15%'
+            '<10%'
+        )
+        .to(
+            '.loader_bottom-text',
+            {
+                duration: 0.4,
+                opacity: 0,
+            },
+            '<0%'
         );
 }
