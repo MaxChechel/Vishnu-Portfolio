@@ -81,10 +81,12 @@ export default function heroReveal() {
             {
                 y: '0%',
                 opacity: 1,
-                duration: 0.6,
+                filter: 'blur(0px)',
+                rotationZ: 0,
+                duration: 0.5,
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
             },
-            '<20%'
+            '<0%'
         );
 }
