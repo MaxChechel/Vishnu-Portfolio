@@ -111,7 +111,7 @@ export default function heroReveal() {
                 duration: 0.5,
                 ease: 'power4.out',
             },
-            '<80%'
+            '<50%'
         )
         .to(
             '.marquee_component',
