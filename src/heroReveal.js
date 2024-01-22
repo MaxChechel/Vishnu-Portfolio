@@ -33,6 +33,6 @@ export default function heroReveal() {
                 duration: 0.4,
                 opacity: 0,
             },
-            '<0%'
+            '<'
         );
 }
