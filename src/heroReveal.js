@@ -74,7 +74,19 @@ export default function heroReveal() {
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
             },
-            '<40%'
+            '<25%'
+        )
+        .to(
+            '.header_projects-list-wrap .text-caption',
+            {
+                y: '0%',
+                opacity: 1,
+                filter: 'blur(0px)',
+                rotationZ: 0,
+                duration: 0.5,
+                ease: 'power4.out',
+            },
+            '<0%'
         )
         .to(
             '.header_projects-link-text',
