@@ -60,7 +60,7 @@ export default function heroReveal() {
                 duration: 0.6,
                 y: '0%',
                 rotationZ: 0,
-                transformOrigin: 'center center',
+                transformOrigin: 'left bottom',
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
             },
