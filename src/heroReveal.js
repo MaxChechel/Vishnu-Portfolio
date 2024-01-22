@@ -6,6 +6,20 @@ export default function heroReveal() {
     tl.to('.loader_main-text', {
         opacity: 1,
         filter: 'blur(0px)',
-        duration: 0.4,
-    });
+        duration: 0.8,
+    })
+        .to('.loader', {
+            height: '0%',
+            duration: 1,
+            ease: 'power3.out',
+        })
+        .to(
+            '.loader_main-text',
+            {
+                y: '-100%',
+                duration: 0.5,
+                opacity: 0,
+            },
+            '<40%'
+        );
 }
