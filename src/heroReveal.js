@@ -14,8 +14,8 @@ export default function heroReveal() {
         ease: 'power4.out',
     })
         .to('.loader_main-text', {
-            delay: 0.3,
-            duration: 0.7,
+            delay: 0.1,
+            duration: 0.6,
             transformOrigin: 'center center',
             rotationX: 2,
             filter: 'blur(5px)',
