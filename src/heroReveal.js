@@ -19,10 +19,11 @@ export default function heroReveal() {
         .to(
             '.loader_main-text',
             {
-                y: '-100%',
+                y: '100%',
                 duration: 0.5,
                 opacity: 0,
+                rotationX: 2,
             },
-            '<40%'
+            '<15%'
         );
 }
