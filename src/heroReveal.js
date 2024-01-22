@@ -10,13 +10,13 @@ export default function heroReveal() {
         y: '0%',
         transformOrigin: 'center bottom',
         rotationX: 0,
-        ease: 'power4.in',
+        ease: 'power4.out',
     })
         .to('.loader', {
             delay: 0.4,
             height: '0%',
-            duration: 0.8,
-            ease: 'power4.inOut',
+            duration: 0.9,
+            ease: 'power4.out',
         })
         .to(
             '.loader_main-text',
