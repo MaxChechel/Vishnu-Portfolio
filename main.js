@@ -1,5 +1,6 @@
 import Lenis from '@studio-freight/lenis';
 import imagesLoaded from 'imagesloaded';
+import Swiper from 'swiper';
 import SplitType from 'split-type';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -90,6 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isRefreshing) {
             window.scrollTo(0, 0);
         }
+    });
+
+    //Slider
+    //Initialize swiper slider
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
     });
 
     imagesLoaded('.page-wrapper', () => {
@@ -251,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 opacity: 0,
                 x: '3%',
-                duration: 0.7,
+                duration: 0.5,
                 ease: 'power2.out',
             },
             0.2
