@@ -8,6 +8,7 @@ import Flip from 'gsap/dist/Flip';
 
 import wrapLines from './src/utils';
 import projectSections from './src/projects';
+import heroReveal from './src/heroReveal';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
@@ -37,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     wrapLines('h1');
     wrapLines('.header_subtext');
+
+    //Hero reveal
+    heroReveal();
 
     //Projects sections
     projectSections(projectsSections);
