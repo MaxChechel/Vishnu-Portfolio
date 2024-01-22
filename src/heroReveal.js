@@ -118,9 +118,9 @@ export default function heroReveal() {
             {
                 x: '0%',
                 opacity: 1,
-                duration: 0.8,
+                duration: 1,
                 ease: 'power4.out',
             },
-            '<50%'
+            '<0%'
         );
 }
