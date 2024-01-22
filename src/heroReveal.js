@@ -82,6 +82,7 @@ export default function heroReveal() {
                 y: '0%',
                 opacity: 1,
                 filter: 'blur(0px)',
+                transformOrigin: 'left bottom',
                 rotationZ: 0,
                 duration: 0.5,
                 ease: 'power4.out',
@@ -93,6 +94,7 @@ export default function heroReveal() {
             {
                 y: '0%',
                 opacity: 1,
+                transformOrigin: 'left bottom',
                 filter: 'blur(0px)',
                 rotationZ: 0,
                 duration: 0.5,
