@@ -57,14 +57,14 @@ export default function heroReveal() {
             {
                 opacity: 1,
                 filter: 'blur(0px)',
-                duration: 0.6,
+                duration: 0.5,
                 y: '0%',
                 rotationZ: 0,
                 transformOrigin: 'left bottom',
                 ease: 'power4.out',
                 stagger: { each: 0.05 },
             },
-            '<40%'
+            '<35%'
         )
         .to(
             '.header_projects-list-link',
@@ -74,7 +74,7 @@ export default function heroReveal() {
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
             },
-            '<25%'
+            '<15%'
         )
         .to(
             '.header_projects-list-wrap .text-caption',
