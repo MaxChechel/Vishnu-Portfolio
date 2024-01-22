@@ -118,6 +118,7 @@ export default function heroReveal() {
             {
                 x: '0%',
                 opacity: 1,
+                filter: 'blur(0px)',
                 duration: 1,
                 ease: 'power4.out',
             },
