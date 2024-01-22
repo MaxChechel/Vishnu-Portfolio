@@ -7,6 +7,9 @@ export default function heroReveal() {
         opacity: 1,
         filter: 'blur(0px)',
         duration: 0.8,
+        y: '0%',
+        transformOrigin: 'center bottom',
+        rotationX: 0,
     })
         .to('.loader', {
             height: '0%',
