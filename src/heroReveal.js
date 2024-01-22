@@ -16,7 +16,7 @@ export default function heroReveal() {
         .to('.loader_main-text', {
             delay: 0.1,
             duration: 0.6,
-            transformOrigin: 'center center',
+            transformOrigin: 'top center',
             rotationX: 2,
             filter: 'blur(10px)',
             opacity: 0,
@@ -122,6 +122,6 @@ export default function heroReveal() {
                 duration: 1,
                 ease: 'power4.out',
             },
-            '<40%'
+            '<0%'
         );
 }
