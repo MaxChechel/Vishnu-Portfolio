@@ -13,23 +13,25 @@ export default function heroReveal() {
         rotationX: 0,
         ease: 'power4.out',
     })
-        .to('.loader', {
-            delay: 0.4,
-            height: '0%',
-            duration: 1,
-            ease: 'expo.out',
-        })
         .to(
             '.loader_main-text',
             {
-                duration: 0.4,
-                filter: 'blur(40px)',
+                delay: 0.5,
+                duration: 0.6,
+                transformOrigin: 'center top',
+                rotationX: 2,
+                filter: 'blur(20px)',
                 opacity: 0,
                 y: '100%',
                 ease: 'power4.out',
             },
             '<'
         )
+        .to('.loader', {
+            height: '0%',
+            duration: 1,
+            ease: 'expo.out',
+        })
         .to(
             '.loader_bottom-text',
             {
