@@ -9,7 +9,7 @@ export default function projectSections(selector) {
         const sectionsCount = section.querySelector('.text-caption:last-child');
         //Set order
         currentOrder.textContent = `0${i + 1}`;
-        sectionsCount.textContent = `0${section.length}`;
+        sectionsCount.textContent = `0${selector.length}`;
 
         //Set id
         section.setAttribute('id', slug);

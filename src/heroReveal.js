@@ -42,7 +42,7 @@ export default function heroReveal() {
             {
                 opacity: 1,
                 filter: 'blur(0px)',
-                duration: 0.6,
+                duration: 0.65,
                 y: '0%',
                 transformOrigin: 'center center',
                 rotationX: 0,
@@ -57,14 +57,14 @@ export default function heroReveal() {
             {
                 opacity: 1,
                 filter: 'blur(0px)',
-                duration: 0.5,
+                duration: 0.55,
                 y: '0%',
                 rotationZ: 0,
                 transformOrigin: 'left bottom',
                 ease: 'power4.out',
                 stagger: { each: 0.05 },
             },
-            '<35%'
+            '<30%'
         )
         .to(
             '.header_projects-list-link',
@@ -74,7 +74,7 @@ export default function heroReveal() {
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
             },
-            '<15%'
+            '<10%'
         )
         .to(
             '.header_projects-list-wrap .text-caption',
