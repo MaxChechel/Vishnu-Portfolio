@@ -40,9 +40,9 @@ export default function heroReveal() {
         .to('h1 .word', {
             opacity: 1,
             filter: 'blur(0px)',
-            duration: 0.5,
+            duration: 0.6,
             y: '0%',
             ease: 'power4.out',
-            stagger: { each: 0.01 },
+            stagger: { each: 0.1 },
         });
 }
