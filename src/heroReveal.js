@@ -80,6 +80,7 @@ export default function heroReveal() {
             '.header_projects-link-text',
             {
                 y: '0%',
+                opacity: 1,
                 duration: 0.6,
                 ease: 'power4.out',
                 stagger: { each: 0.075 },
