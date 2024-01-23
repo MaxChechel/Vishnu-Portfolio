@@ -1,6 +1,5 @@
 import Lenis from '@studio-freight/lenis';
 import imagesLoaded from 'imagesloaded';
-import Swiper from 'swiper';
 import SplitType from 'split-type';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,6 +8,7 @@ import Flip from 'gsap/dist/Flip';
 import wrapLines from './src/utils';
 import projectSections from './src/projects';
 import heroReveal from './src/heroReveal';
+import slider from './src/slider';
 
 const worksLink = document.querySelector('#works-link');
 const contactLink = document.querySelector('#contact-link');
@@ -79,11 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Slider
-    //Initialize swiper slider
-    const swiper = new Swiper('.swiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-    });
+    //Initialize  slider
+    slider();
 
     imagesLoaded('.page-wrapper', () => {
         lenis = new Lenis({

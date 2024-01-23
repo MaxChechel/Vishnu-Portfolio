@@ -16,6 +16,8 @@
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
+        "@splidejs/splide": "^4.1.4",
+        "@splidejs/splide-extension-auto-scroll": "^0.5.3",
         "@studio-freight/lenis": "^1.0.33",
         "gsap": "npm:@gsap/shockingly@^3.12.5",
         "imagesloaded": "^5.0.0",
