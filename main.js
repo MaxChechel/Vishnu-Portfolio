@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         finalNum = likesNum;
                     if (item.getAttribute('data-count') === 'shots')
                         finalNum = shotssNum;
-                    console.log(finalNum);
                     gsap.to(item, {
                         duration: 1.5,
                         innerHTML: finalNum,
@@ -271,14 +270,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             0.2
         )
-        .to(
-            '.bg-overlay',
-            {
-                width: '100%',
-                duration: 0,
-            },
-            '<'
-        )
+        .to('.bg-overlay', {
+            width: '100%',
+            duration: 0,
+        })
         .to(
             '.bg-overlay',
             {
