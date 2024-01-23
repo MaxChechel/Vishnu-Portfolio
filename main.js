@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mm.add('(max-width: 479px)', () => {
         nav = document.querySelector('.navbar_container');
     });
-    const navTl = gsap.timeline();
+    const navTl = gsap.timeline({ paused: true });
     navTl
         .to(nav, {
             opacity: 1,
