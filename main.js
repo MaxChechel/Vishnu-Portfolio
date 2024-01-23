@@ -20,6 +20,8 @@ const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
 const aboutMenu = document.querySelector('.about_component');
 const statsSection = document.querySelector('.section_stats');
+const cursorWrap = document.querySelector('.custom-cursor_wrap');
+const cursor = document.querySelector('.custom-cursor');
 
 const projectsLinkListItem = document.querySelectorAll(
     '.header_projects-list-item'
@@ -92,6 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isRefreshing) {
             window.scrollTo(0, 0);
         }
+    });
+
+    cursorWrap.addEventListener('mouseenter', function () {
+        cursor.classList.add('is-active');
+    });
+    cursorWrap.addEventListener('mouseleave', function () {
+        cursor.classList.remove('is-active');
     });
 
     //Slider
