@@ -303,6 +303,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('visibilitychange', function () {
-    heroReveal();
-});
+document.addEventListener('visibilitychange', heroReveal);
