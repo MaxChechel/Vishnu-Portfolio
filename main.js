@@ -31,7 +31,7 @@ gsap.registerPlugin(ScrollTrigger, Flip);
 let mm = gsap.matchMedia();
 let lenis;
 
-const heroRevealTl = heroReveal();
+let heroRevealTl;
 
 document.addEventListener('DOMContentLoaded', () => {
     //Split text
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapLines('.header_subtext .line');
 
     //Hero reveal
-
+    heroRevealTl = heroReveal();
     heroRevealTl.play();
 
     //Projects sections
