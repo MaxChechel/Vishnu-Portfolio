@@ -266,10 +266,10 @@ document.addEventListener('DOMContentLoaded', () => {
             '.bg-overlay',
             {
                 opacity: 0,
-                duration: 0.4,
+                duration: 0.3,
                 pointerEvents: 'none',
             },
-            '<85%'
+            '<75%'
         );
 
     aboutLink.addEventListener('click', (e) => {
