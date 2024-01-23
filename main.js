@@ -325,7 +325,7 @@ document.addEventListener('visibilitychange', () => {
             heroRevealTl.restart();
             setTimeout(() => {
                 tabOpened = true;
-            }, 2000);
+            }, 10000);
         }
     }
 });
