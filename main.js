@@ -33,6 +33,10 @@ let lenis;
 
 let heroRevealTl;
 
+//Timer for hero reveal on tab change
+let tabHiddenTime;
+const threshold = 60 * 1000;
+
 document.addEventListener('DOMContentLoaded', () => {
     //Split text
     const split = new SplitType('h1, .header_subtext ,.project_cms-item h3', {
@@ -318,9 +322,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-        console.log('Browser tab is hidden');
+        tabHiddenTime = Date.now();
     } else {
-        console.log('Browser tab is visible');
-        heroRevealTl.restart();
+        if (Date.now() - tabHiddenTime > threshold) {
+            heroRevealTl.restart();
+        }
     }
 });
