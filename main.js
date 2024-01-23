@@ -233,6 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: aboutMenuTime,
             ease: 'power3.out',
         })
+        .to('.bg-overlay', {
+            width: '100%',
+            duration: 0,
+        })
         .to(
             '.bg-overlay',
             {
@@ -270,10 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             0.2
         )
-        .to('.bg-overlay', {
-            width: '100%',
-            duration: 0,
-        })
         .to(
             '.bg-overlay',
             {
