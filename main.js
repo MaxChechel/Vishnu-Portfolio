@@ -433,6 +433,6 @@ document.addEventListener('visibilitychange', () => {
         console.log('Browser tab is hidden');
     } else {
         console.log('Browser tab is visible');
-        heroRevealTl.play();
+        heroRevealTl.restart();
     }
 });
