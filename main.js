@@ -341,7 +341,7 @@ document.addEventListener('visibilitychange', () => {
             heroRevealTl.restart();
             setTimeout(() => {
                 tabOpened = true;
-            }, 10000);
+            }, 5000);
         }
     }
 });
