@@ -1,18 +1,19 @@
 import gsap from 'gsap';
 
 export default function heroReveal() {
-    const tl = gsap.timeline();
+    const heroRevealTl = gsap.timeline();
 
-    tl.to('.loader_main-text', {
-        delay: 0.2,
-        opacity: 1,
-        filter: 'blur(0px)',
-        duration: 0.7,
-        y: '0%',
-        transformOrigin: 'center bottom',
-        rotationX: 0,
-        ease: 'power4.out',
-    })
+    heroRevealTl
+        .to('.loader_main-text', {
+            delay: 0.2,
+            opacity: 1,
+            filter: 'blur(0px)',
+            duration: 0.7,
+            y: '0%',
+            transformOrigin: 'center bottom',
+            rotationX: 0,
+            ease: 'power4.out',
+        })
         .to('.loader_main-text', {
             delay: 0.1,
             duration: 0.6,
@@ -124,4 +125,5 @@ export default function heroReveal() {
             },
             '<0%'
         );
+    return heroRevealTl;
 }
