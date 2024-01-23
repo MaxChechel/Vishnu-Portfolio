@@ -431,5 +431,6 @@ document.addEventListener('visibilitychange', () => {
                 },
                 '<0%'
             );
+        console.log(tl);
     }
 });
