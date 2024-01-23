@@ -16,6 +16,7 @@ export default function slider() {
         breakpoints: {
             640: {
                 perPage: 2,
+                gap: '1rem',
             },
         },
     }).mount({ AutoScroll });
