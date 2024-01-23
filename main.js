@@ -60,13 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     mm.add('(max-width: 479px)', () => {
         nav = document.querySelector('.navbar_container');
     });
+
     gsap.to(nav, {
         opacity: 1,
         background: 'rgba(255, 255, 255, .7)',
         duration: 0.4,
         scrollTrigger: {
-            trigger: nav,
-            start: '+=90vh',
+            trigger: '.section_projects',
+            start: 'top 5%',
             toggleActions: 'play none none reverse',
         },
     });
@@ -74,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0,
         duration: 0.4,
         scrollTrigger: {
-            trigger: nav,
-            start: '+=90vh',
+            trigger: '.section_projects',
+            start: 'top 5%',
             toggleActions: 'play none none reverse',
         },
     });
