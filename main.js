@@ -33,9 +33,8 @@ let lenis;
 
 let heroRevealTl;
 
-//Timer for hero reveal on tab change
-let tabHiddenTime;
-const threshold = 60 * 1000;
+//Hero reveal on tab change memory
+let tabOpened;
 
 document.addEventListener('DOMContentLoaded', () => {
     //Split text
@@ -321,11 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        tabHiddenTime = Date.now();
-    } else {
-        if (Date.now() - tabHiddenTime > threshold) {
+    if (!document.hidden) {
+        if (!tabOpened) {
             heroRevealTl.restart();
+            tabOpened = true;
         }
     }
 });
