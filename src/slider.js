@@ -13,6 +13,11 @@ export default function slider() {
         autoScroll: {
             speed: 1,
         },
+        breakpoints: {
+            640: {
+                perPage: 2,
+            },
+        },
     }).mount({ AutoScroll });
 
     //splide.mount();
