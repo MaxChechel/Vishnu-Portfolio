@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Nav menu bg change on scroll
-    let nav = navMenu;
+    let nav = document.querySelector('.navbar_menu-blur');
     mm.add('(max-width: 479px)', () => {
         nav = document.querySelector('.navbar_container');
     });
