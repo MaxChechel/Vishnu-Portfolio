@@ -63,13 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to(nav, {
         opacity: 1,
         background: 'rgba(255, 255, 255, .7)',
-        duration: 0.6,
+        duration: 0.4,
         scrollTrigger: {
             trigger: nav,
-            start: '+=50',
+            start: '+=90vh',
             toggleActions: 'play none none reverse',
         },
-    });
+    }).to(
+        '.navbar_logo-text',
+        {
+            opacity: 0,
+            duration: 0.4,
+        },
+        0
+    );
 
     //Window to top on page refresh
     let isRefreshing = false;
