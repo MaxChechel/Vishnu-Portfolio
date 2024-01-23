@@ -20,7 +20,7 @@ const navLinkShape = document.querySelector('.navbar_link-shape');
 const navMenu = document.querySelector('.navbar_menu');
 const aboutMenu = document.querySelector('.about_component');
 const statsSection = document.querySelector('.section_stats');
-const cursorWrap = document.querySelector('.custom-cursor_wrap');
+const cursorWrap = document.querySelector('.custom-cursor_detect');
 const cursor = document.querySelector('.custom-cursor');
 
 const projectsLinkListItem = document.querySelectorAll(
