@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nav = document.querySelector('.navbar_container');
     });
     gsap.to(nav, {
-        background: 'rgba(255, 255, 255, .8)',
+        opacity: 1,
         duration: 0.6,
         scrollTrigger: {
             trigger: nav,
