@@ -6,7 +6,7 @@ export default function slider() {
         type: 'loop',
         drag: 'free',
         arrows: false,
-        gap: '2rem',
+        gap: 0,
         pagination: false,
         focus: 'center',
         perPage: 3,
@@ -16,7 +16,6 @@ export default function slider() {
         breakpoints: {
             640: {
                 perPage: 2,
-                gap: '1rem',
             },
         },
     }).mount({ AutoScroll });
