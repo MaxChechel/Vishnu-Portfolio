@@ -6,6 +6,7 @@ export default function slider() {
         type: 'loop',
         drag: 'free',
         arrows: false,
+        gap: '2rem',
         pagination: false,
         focus: 'center',
         perPage: 3,
