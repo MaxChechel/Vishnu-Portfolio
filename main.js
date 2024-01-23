@@ -323,7 +323,9 @@ document.addEventListener('visibilitychange', () => {
     if (!document.hidden) {
         if (!tabOpened) {
             heroRevealTl.restart();
-            tabOpened = true;
+            setTimeout(() => {
+                tabOpened = true;
+            }, 2000);
         }
     }
 });
