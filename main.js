@@ -274,6 +274,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .to(
             '.bg-overlay',
             {
+                width: '100%',
+                duration: 0,
+            },
+            '<'
+        )
+        .to(
+            '.bg-overlay',
+            {
                 opacity: 0,
                 duration: 0.3,
                 pointerEvents: 'none',
