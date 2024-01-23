@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     gsap.to(nav, {
-        background: 'rgba(255, 255, 255, .7)',
+        background: 'rgba(255, 255, 255, .9)',
         duration: 0.4,
         scrollTrigger: {
             trigger: '.section_projects',
