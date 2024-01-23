@@ -308,7 +308,7 @@ document.addEventListener('visibilitychange', () => {
         console.log('Browser tab is hidden');
     } else {
         console.log('Browser tab is visible');
-        const tl = gsap.timeline();
+        const tl = gsap.timeline({ paused: true });
 
         tl.to('.loader_main-text', {
             delay: 0.2,
@@ -431,6 +431,6 @@ document.addEventListener('visibilitychange', () => {
                 },
                 '<0%'
             );
-        console.log(tl);
+        tl.play();
     }
 });
