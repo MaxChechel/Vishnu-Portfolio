@@ -251,6 +251,14 @@ document.addEventListener('DOMContentLoaded', () => {
             0
         )
         .to(
+            '.custom-cursor_parent',
+            {
+                opacity: 1,
+                duration: 0,
+            },
+            0
+        )
+        .to(
             '[data-about-inner]',
             {
                 opacity: 1,
@@ -269,15 +277,19 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: 'power3.out',
         })
         .to(
-            '[data-about-inner]',
+            '.custom-cursor_parent',
             {
                 opacity: 0,
-                x: '3%',
-                duration: 0.5,
-                ease: 'power2.out',
+                duration: 0.3,
             },
-            0.2
+            0
         )
+        .to('[data-about-inner]', {
+            opacity: 0,
+            x: '3%',
+            duration: 0.5,
+            ease: 'power2.out',
+        })
         .to(
             '.bg-overlay',
             {
