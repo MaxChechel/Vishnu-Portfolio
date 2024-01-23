@@ -306,8 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         console.log('Browser tab is hidden');
-        heroReveal();
     } else {
         console.log('Browser tab is visible');
+        heroReveal();
     }
 });
